@@ -161,7 +161,7 @@ $('appointmentForm').addEventListener('submit', async (ev)=>{
     $('randevuTarihi').value = keepDate;
     $('secilenOda').value = keepRoom;
     await loadSlots();
-    msg($('formMsg'), data.message || 'Randevu talebiniz alınmıştır. Randevu biletiniz e-posta adresinize gönderilmiştir.','success');
+    msg($('formMsg'), data.message || 'Randevu talebiniz alınmıştır. Randevu bilgileriniz e-posta adresinize gönderilmiştir.','success');
   }catch(e){ msg($('formMsg'), e.message || 'İşlem sırasında bir hata oluştu.','error'); await loadSlots(); }
   finally{ $('submitBtn').disabled=false; $('submitBtn').textContent='Tanıtım Randevusu Oluştur'; }
 });
